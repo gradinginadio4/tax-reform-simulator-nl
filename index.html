@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belastinghervorming Impact Simulatie 2025-2026 | Homieux Media</title>
+    <meta name="description" content="Evalueer de impact van de Belgische belastinghervormingen 2025-2026 op uw kantoor. Reglementaire intelligentie voor accountancy en fiscaal advies.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="https://homieuxmedia.com" target="_blank" rel="noopener noreferrer" class="logo-link">
+                <img src="logo-homieux.png" alt="Homieux Media - Strategisch adviesbureau" class="logo">
+            </a>
+            <nav class="language-nav" aria-label="Taalkeuze">
+                <span class="current-lang">NL</span>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="container">
+                <h1 class="hero-title">Impact Simulatie Belastinghervorming</h1>
+                <p class="hero-subtitle">Anticipeer op reglementaire wijzigingen 2025-2026 en evalueer uw operationele paraatheid voor nieuwe fiscale verplichtingen.</p>
+                <div class="disclaimer-box">
+                    <p><strong>Methodologische noot:</strong> Deze simulatie is gebaseerd op publieke reglementaire informatie en bedrijfsprofielmodellering. Er worden geen interne vertrouwelijke gegevens gebruikt.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="simulation-container">
+            <div class="container">
+                <div class="progress-bar" aria-hidden="true">
+                    <div class="progress-step active" data-step="1">1</div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-step="2">2</div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-step="3">3</div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-step="4">4</div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-step="5">5</div>
+                </div>
+
+                <form id="simulationForm" class="simulation-form" novalidate>
+                    
+                    <fieldset class="form-step active" id="step1">
+                        <legend class="step-title">Samenstelling klantenportefeuille</legend>
+                        <p class="step-description">Geef de geschatte verdeling van uw klantenbestand aan.</p>
+                        
+                        <div class="input-group">
+                            <label for="smeClients" class="input-label">KMO's en middenstand <span class="percentage-display" id="smeDisplay">0%</span></label>
+                            <input type="range" id="smeClients" name="smeClients" min="0" max="100" value="0" class="range-input" required>
+                            <div class="range-labels"><span>0%</span><span>50%</span><span>100%</span></div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="corporateClients" class="input-label">Grote ondernemingen en groepen <span class="percentage-display" id="corporateDisplay">0%</span></label>
+                            <input type="range" id="corporateClients" name="corporateClients" min="0" max="100" value="0" class="range-input" required>
+                            <div class="range-labels"><span>0%</span><span>50%</span><span>100%</span></div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="internationalClients" class="input-label">Internationale klanten en grensoverschrijdende structuren <span class="percentage-display" id="internationalDisplay">0%</span></label>
+                            <input type="range" id="internationalClients" name="internationalClients" min="0" max="100" value="0" class="range-input" required>
+                            <div class="range-labels"><span>0%</span><span>50%</span><span>100%</span></div>
+                        </div>
+
+                        <div class="validation-message" id="clientMixValidation">Het totaal moet 100% zijn</div>
+
+                        <div class="button-group">
+                            <button type="button" class="btn btn-primary" id="toStep2" disabled>Verdergaan</button>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-step" id="step2">
+                        <legend class="step-title">Dienstverlening specialisaties</legend>
+                        <p class="step-description">Selecteer de hoofddomeinen van uw kantoor die door de hervormingen worden geraakt.</p>
+                        
+                        <div class="checkbox-grid">
+                            <div class="checkbox-card">
+                                <input type="checkbox" id="capitalGains" name="specialization" value="capitalGains">
+                                <label for="capitalGains">
+                                    <span class="checkbox-title">Advies meerwaarden</span>
+                                    <span class="checkbox-desc">Impact hervorming januari 2026</span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-card">
+                                <input type="checkbox" id="exitTax" name="specialization" value="exitTax">
+                                <label for="exitTax">
+                                    <span class="checkbox-title">Exit tax en kapitaalmobiliteit</span>
+                                    <span class="checkbox-desc">Toepassing juli 2025</span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-card">
+                                <input type="checkbox" id="digitalInvoicing" name="specialization" value="digitalInvoicing">
+                                <label for="digitalInvoicing">
+                                    <span class="checkbox-title">Elektronische facturatie advies</span>
+                                    <span class="checkbox-desc">Wettelijke B2B-verplichting</span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-card">
+                                <input type="checkbox" id="crossBorder" name="specialization" value="crossBorder">
+                                <label for="crossBorder">
+                                    <span class="checkbox-title">Grensoverschrijdende fiscaliteit</span>
+                                    <span class="checkbox-desc">DAC7-richtlijn, automatische uitwisseling</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="button-group">
+                            <button type="button" class="btn btn-secondary" id="backToStep1">Terug</button>
+                            <button type="button" class="btn btn-primary" id="toStep3">Verdergaan</button>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-step" id="step3">
+                        <legend class="step-title">Digitale volwassenheid kantoor</legend>
+                        <p class="step-description">Evalueer uw huidige digitale infrastructuur en operationele efficiëntie.</p>
+                        
+                        <div class="radio-group">
+                            <div class="radio-card">
+                                <input type="radio" id="portalYes" name="clientPortal" value="true" required>
+                                <label for="portalYes">
+                                    <span class="radio-title">Beveiligd klantenportaal</span>
+                                    <span class="radio-desc">Gecodeerde documentuitwisseling actief</span>
+                                </label>
+                            </div>
+                            <div class="radio-card">
+                                <input type="radio" id="portalNo" name="clientPortal" value="false" required>
+                                <label for="portalNo">
+                                    <span class="radio-title">Geen specifiek portaal</span>
+                                    <span class="radio-desc">Uitwisseling via e-mail of papier</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="checkbox-grid single-column">
+                            <div class="checkbox-card">
+                                <input type="checkbox" id="eInvoicingCapable" name="digitalCapabilities" value="eInvoicingCapable">
+                                <label for="eInvoicingCapable">
+                                    <span class="checkbox-title">Peppol e-facturatie capaciteit</span>
+                                    <span class="checkbox-desc">Operationele verbinding met federaal platform</span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-card">
+                                <input type="checkbox" id="timeTrackingSoftware" name="digitalCapabilities" value="timeTrackingSoftware">
+                                <label for="timeTrackingSoftware">
+                                    <span class="checkbox-title">Conforme tijdregistratiesoftware</span>
+                                    <span class="checkbox-desc">KB 12 mei 2023 (art. 4, §3)</span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-card">
+                                <input type="checkbox" id="automationTools" name="digitalCapabilities" value="automationTools">
+                                <label for="automationTools">
+                                    <span class="checkbox-title">Automatiseringstools documentbeheer</span>
+                                    <span class="checkbox-desc">Geautomatiseerde workflows, rapportgeneratie</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="button-group">
+                            <button type="button" class="btn btn-secondary" id="backToStep2">Terug</button>
+                            <button type="button" class="btn btn-primary" id="toStep4">Verdergaan</button>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-step" id="step4">
+                        <legend class="step-title">Geografische spreiding</legend>
+                        <p class="step-description">Bepaal het geografische bereik van uw adviesactiviteiten.</p>
+                        
+                        <div class="radio-group">
+                            <div class="radio-card">
+                                <input type="radio" id="belgiumOnly" name="geographicScope" value="belgiumOnly" required>
+                                <label for="belgiumOnly">
+                                    <span class="radio-title">Enkel België</span>
+                                    <span class="radio-desc">Nationaal en regionaal fiscaal advies</span>
+                                </label>
+                            </div>
+                            <div class="radio-card">
+                                <input type="radio" id="crossBorderEU" name="geographicScope" value="crossBorderEU" required>
+                                <label for="crossBorderEU">
+                                    <span class="radio-title">België + Europese Unie</span>
+                                    <span class="radio-desc">ATAD-richtlijn, DAC7, automatische uitwisseling</span>
+                                </label>
+                            </div>
+                            <div class="radio-card">
+                                <input type="radio" id="globalScope" name="geographicScope" value="globalScope" required>
+                                <label for="globalScope">
+                                    <span class="radio-title">Wereldwijd internationaal</span>
+                                    <span class="radio-desc">OESO, BEPS 2.0, derde landen</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="button-group">
+                            <button type="button" class="btn btn-secondary" id="backToStep3">Terug</button>
+                            <button type="button" class="btn btn-primary" id="calculateResults">Impact berekenen</button>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-step" id="step5">
+                        <legend class="step-title">Simulatieresultaten</legend>
+                        
+                        <div class="results-container">
+                            <div class="score-section">
+                                <div class="score-circle" id="disruptionScore">
+                                    <span class="score-value">--</span>
+                                    <span class="score-label">Disruptie-index</span>
+                                </div>
+                                <div class="score-interpretation" id="scoreInterpretation"></div>
+                            </div>
+
+                            <div class="analysis-grid">
+                                <div class="analysis-card">
+                                    <h3>Operationele risicokaart</h3>
+                                    <div id="riskBreakdown" class="risk-list"></div>
+                                </div>
+
+                                <div class="analysis-card">
+                                    <h3>Efficiëntie-optimalisatiematrix</h3>
+                                    <div id="automationMatrix" class="opportunity-list"></div>
+                                </div>
+
+                                <div class="analysis-card full-width">
+                                    <h3>Sectorale positionering</h3>
+                                    <p class="methodology-note">Schatting op basis van publieke signalen (technologische partnerschappen, reglementaire communicatie, wervingsactiviteit).</p>
+                                    <div id="peerHeatmap" class="heatmap-container"></div>
+                                </div>
+
+                                <div class="analysis-card full-width">
+                                    <h3>Conformiteitsroadmap</h3>
+                                    <div id="complianceBlueprint" class="blueprint-list"></div>
+                                </div>
+                            </div>
+
+                            <div class="cta-section">
+                                <h3>Gepersonaliseerde analyse van uw situatie</h3>
+                                <p>Krijg een diepgaande evaluatie van uw blootstelling aan hervormingen en een prioriteitenactieplan voor 90 dagen.</p>
+                                <a href="https://cal.com/homieux-media/strategisch-kennismakingsgesprek-bespreek-uw-zakelijke-uitdagingen" target="_blank" rel="noopener noreferrer" class="btn btn-cta">
+                                    Boek een kennismakingsgesprek van 15 minuten
+                                </a>
+                                <p class="cta-note">Zonder verplichtingen. Vertrouwelijke diagnose.</p>
+                            </div>
+                        </div>
+
+                        <div class="button-group">
+                            <button type="button" class="btn btn-secondary" id="restartSimulation">Nieuwe simulatie</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="logo-homieux.png" alt="Homieux Media" class="footer-logo">
+                    <p>Reglementaire intelligentie en digitale strategie voor accountantskantoren en fiscale adviseurs.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Juridisch</h4>
+                        <ul>
+                            <li><a href="https://www.homieuxmedia.com/nl/privacybeleid" target="_blank" rel="noopener noreferrer">Privacybeleid</a></li>
+                            <li><a href="https://www.homieuxmedia.com/nl/gebruiksvoorwaarden" target="_blank" rel="noopener noreferrer">Gebruiksvoorwaarden</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="https://homieuxmedia.com" target="_blank" rel="noopener noreferrer">homieuxmedia.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Homieux Media. Alle rechten voorbehouden.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
